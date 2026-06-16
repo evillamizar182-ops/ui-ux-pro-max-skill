@@ -1,19 +1,18 @@
 "use client";
 
 import { useRef } from "react";
-import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { getFeatured, formatPrice } from "@/lib/products";
 import Button from "@/components/ui/Button";
+import ProductVisual from "@/components/ui/ProductVisual";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function StarProduct() {
   const sectionRef = useRef<HTMLElement>(null);
-  const imageRef = useRef<HTMLDivElement>(null);
-  const revealRef = useRef<HTMLDivElement>(null);
+  const visualRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
 
   const star = getFeatured()[0];
@@ -27,29 +26,16 @@ export default function StarProduct() {
       if (prefersReduced) return;
 
       gsap.fromTo(
-        revealRef.current,
-        { scaleX: 1 },
+        visualRef.current,
+        { opacity: 0, x: -40 },
         {
-          scaleX: 0,
+          opacity: 1,
+          x: 0,
           duration: 0.8,
-          ease: "power4.inOut",
-          scrollTrigger: {
-            trigger: imageRef.current,
-            start: "top 75%",
-          },
+          ease: "power3.out",
+          scrollTrigger: { trigger: visualRef.current, start: "top 80%" },
         }
       );
-
-      gsap.to(imageRef.current?.querySelector("img") ?? [], {
-        yPercent: -8,
-        ease: "none",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: true,
-        },
-      });
 
       gsap.fromTo(
         textRef.current?.children ?? [],
@@ -60,10 +46,7 @@ export default function StarProduct() {
           duration: 0.6,
           stagger: 0.08,
           ease: "power3.out",
-          scrollTrigger: {
-            trigger: textRef.current,
-            start: "top 80%",
-          },
+          scrollTrigger: { trigger: textRef.current, start: "top 80%" },
         }
       );
     },
@@ -76,21 +59,11 @@ export default function StarProduct() {
       className="py-20 md:py-32 lg:py-40 px-6 md:px-10"
     >
       <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
-        <div
-          ref={imageRef}
-          className="relative aspect-[4/5] overflow-hidden bg-gris-niebla"
-        >
-          <Image
-            src={star.imagenes[0]}
-            alt={star.nombre}
-            fill
-            className="object-cover"
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            loading="lazy"
-          />
-          <div
-            ref={revealRef}
-            className="absolute inset-0 bg-gris-niebla origin-right z-10"
+        <div ref={visualRef} className="opacity-0">
+          <ProductVisual
+            product={star}
+            className="aspect-[4/5]"
+            size="lg"
           />
         </div>
 

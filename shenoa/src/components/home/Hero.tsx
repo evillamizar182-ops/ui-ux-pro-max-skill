@@ -1,20 +1,19 @@
 "use client";
 
 import { useRef } from "react";
-import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Button from "@/components/ui/Button";
+import { HeroVisual } from "@/components/ui/ProductVisual";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
-  const imageRef = useRef<HTMLDivElement>(null);
-  const overlayRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const lineRef = useRef<HTMLSpanElement>(null);
+  const diamondRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
     () => {
@@ -23,10 +22,7 @@ export default function Hero() {
       ).matches;
 
       if (prefersReduced) {
-        gsap.set([imageRef.current, contentRef.current], { opacity: 1 });
-        if (contentRef.current) {
-          gsap.set(contentRef.current.children, { opacity: 1 });
-        }
+        if (contentRef.current) gsap.set(contentRef.current.children, { opacity: 1 });
         gsap.set(lineRef.current, { scaleX: 1 });
         return;
       }
@@ -34,23 +30,16 @@ export default function Hero() {
       const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
       tl.fromTo(
-        imageRef.current,
-        { scale: 1.15, opacity: 0 },
-        { scale: 1, opacity: 1, duration: 1.4, ease: "power2.out" }
-      );
-
-      tl.fromTo(
-        overlayRef.current,
-        { opacity: 0 },
-        { opacity: 1, duration: 0.6 },
-        "-=0.8"
+        diamondRef.current?.children ?? [],
+        { scale: 0.8, opacity: 0, rotation: 45 },
+        { scale: 1, opacity: 1, rotation: 45, duration: 1.4, stagger: 0.15, ease: "power2.out" },
       );
 
       tl.fromTo(
         lineRef.current,
         { scaleX: 0 },
         { scaleX: 1, duration: 0.8, ease: "power4.out" },
-        "-=0.3"
+        "-=0.8"
       );
 
       const els = contentRef.current?.children;
@@ -58,26 +47,10 @@ export default function Hero() {
         tl.fromTo(
           els,
           { opacity: 0, y: 40 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.7,
-            stagger: 0.12,
-          },
+          { opacity: 1, y: 0, duration: 0.7, stagger: 0.12 },
           "-=0.5"
         );
       }
-
-      gsap.to(imageRef.current, {
-        yPercent: -12,
-        ease: "none",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top top",
-          end: "bottom top",
-          scrub: true,
-        },
-      });
 
       gsap.to(contentRef.current, {
         opacity: 0,
@@ -99,21 +72,16 @@ export default function Hero() {
       ref={sectionRef}
       className="relative h-svh min-h-[600px] w-full overflow-hidden"
     >
-      <div ref={imageRef} className="absolute inset-[-10%] opacity-0">
-        <Image
-          src="https://placehold.co/1920x1080/1A1A18/F2F2F0?text=SHENOA&font=playfair-display"
-          alt="Shenoa Joyeria de Autor"
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
-      </div>
+      <HeroVisual />
 
+      {/* Animated diamonds */}
       <div
-        ref={overlayRef}
-        className="absolute inset-0 bg-gradient-to-b from-negro-tinta/50 via-negro-tinta/30 to-negro-tinta/60 opacity-0"
-      />
+        ref={diamondRef}
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+      >
+        <div className="absolute -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px] sm:w-[380px] sm:h-[380px] border border-white/[0.04] rotate-45 opacity-0" />
+        <div className="absolute -translate-x-1/2 -translate-y-1/2 w-[180px] h-[180px] sm:w-[260px] sm:h-[260px] border border-white/[0.03] rotate-45 opacity-0" />
+      </div>
 
       <div
         ref={contentRef}
@@ -125,30 +93,30 @@ export default function Hero() {
 
         <span
           ref={lineRef}
-          className="block w-12 h-[1px] bg-esmeralda-luz mb-6 md:mb-8 origin-center scale-x-0"
+          className="block w-12 h-[1px] bg-esmeralda-luz/60 mb-6 md:mb-8 origin-center scale-x-0"
         />
 
-        <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[96px] text-blanco mb-3 max-w-5xl leading-[1.05]">
+        <h1 className="font-display text-[44px] sm:text-6xl md:text-7xl lg:text-8xl xl:text-[96px] text-blanco/95 mb-2 max-w-5xl leading-[1.08]">
           El arte de lo
         </h1>
-        <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[96px] text-blanco mb-8 md:mb-10 max-w-5xl leading-[1.05] italic">
+        <h1 className="font-display text-[44px] sm:text-6xl md:text-7xl lg:text-8xl xl:text-[96px] text-blanco/95 mb-8 md:mb-10 max-w-5xl leading-[1.08] italic">
           extraordinario
         </h1>
 
         <Button
           href="/coleccion/anillos"
           magnetic
-          className="border-blanco/80 text-blanco hover:text-negro-tinta [&>span:first-child]:bg-blanco"
+          className="border-blanco/40 text-blanco/90 hover:text-negro-tinta [&>span:first-child]:bg-blanco/90"
         >
           Explorar coleccion
         </Button>
       </div>
 
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
-        <span className="text-eyebrow text-blanco/40 text-[9px] tracking-[0.3em]">
+        <span className="text-eyebrow text-blanco/30 text-[9px] tracking-[0.3em]">
           Scroll
         </span>
-        <div className="w-[1px] h-10 bg-gradient-to-b from-blanco/50 to-transparent" />
+        <div className="w-[1px] h-10 bg-gradient-to-b from-blanco/30 to-transparent" />
       </div>
     </section>
   );

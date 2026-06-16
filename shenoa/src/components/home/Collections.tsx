@@ -1,12 +1,12 @@
 "use client";
 
 import { useRef } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight } from "lucide-react";
+import { CollectionVisual } from "@/components/ui/ProductVisual";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,21 +15,18 @@ const collections = [
     title: "Anillos",
     subtitle: "Compromiso y eternidad",
     href: "/coleccion/anillos",
-    image: "https://placehold.co/900x1100/1A1A18/F2F2F0?text=Anillos&font=playfair-display",
     span: "md:col-span-2 md:row-span-2",
   },
   {
     title: "Collares",
     subtitle: "Elegancia al cuello",
     href: "/coleccion/collares",
-    image: "https://placehold.co/600x700/0E5E4A/F2F2F0?text=Collares&font=playfair-display",
     span: "",
   },
   {
     title: "Aretes",
     subtitle: "Luz en movimiento",
     href: "/coleccion/aretes",
-    image: "https://placehold.co/600x700/3A3A38/F2F2F0?text=Aretes&font=playfair-display",
     span: "",
   },
 ];
@@ -103,25 +100,17 @@ export default function Collections() {
               data-col
               className={`group relative overflow-hidden opacity-0 ${col.span}`}
             >
-              <Image
-                src={col.image}
-                alt={col.title}
-                fill
-                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-negro-tinta/60 via-negro-tinta/20 to-transparent group-hover:from-negro-tinta/50 transition-all duration-500" />
+              <CollectionVisual category={col.title} />
 
-              <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
-                <p className="text-eyebrow text-blanco/60 mb-2 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-400">
+              <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 z-10">
+                <p className="text-eyebrow text-white/40 mb-2 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-400">
                   {col.subtitle}
                 </p>
                 <div className="flex items-end justify-between">
-                  <h3 className="font-display text-3xl md:text-4xl text-blanco">
+                  <h3 className="font-display text-3xl md:text-4xl text-blanco/90">
                     {col.title}
                   </h3>
-                  <span className="w-10 h-10 flex items-center justify-center border border-blanco/30 text-blanco/60 group-hover:border-blanco group-hover:text-blanco transition-all duration-300 translate-y-2 group-hover:translate-y-0">
+                  <span className="w-10 h-10 flex items-center justify-center border border-white/20 text-white/40 group-hover:border-white/60 group-hover:text-white/80 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
                     <ArrowUpRight size={16} strokeWidth={1.5} />
                   </span>
                 </div>
