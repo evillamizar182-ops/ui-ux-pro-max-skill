@@ -4,6 +4,7 @@ import { getAll, getBySlug } from "@/lib/products";
 import SmoothScroll from "@/components/providers/SmoothScroll";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import WhatsAppFloat from "@/components/ui/WhatsAppFloat";
 import ProductDetail from "./ProductDetail";
 
 export async function generateStaticParams() {
@@ -47,6 +48,7 @@ export default async function ProductoPage({
       <Navbar />
       <ProductDetail product={product} related={related} />
       <Footer />
+      <WhatsAppFloat />
     </SmoothScroll>
   );
 }

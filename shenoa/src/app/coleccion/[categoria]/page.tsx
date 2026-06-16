@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import SmoothScroll from "@/components/providers/SmoothScroll";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import WhatsAppFloat from "@/components/ui/WhatsAppFloat";
 import CollectionContent from "./CollectionContent";
 
 const validCategories = ["anillos", "collares", "aretes", "pulseras"] as const;
@@ -29,7 +30,7 @@ export async function generateMetadata({
   const name = categoryNames[categoria as ValidCategory];
   return {
     title: name,
-    description: `Coleccion de ${name.toLowerCase()} Shenoa. Piezas unicas de joyeria artesanal.`,
+    description: `Coleccion de ${name.toLowerCase()} Shenoa. Piezas unicas de joyeria artesanal con esmeraldas colombianas.`,
   };
 }
 
@@ -51,6 +52,7 @@ export default async function ColeccionPage({
         title={categoryNames[categoria as ValidCategory]}
       />
       <Footer />
+      <WhatsAppFloat />
     </SmoothScroll>
   );
 }

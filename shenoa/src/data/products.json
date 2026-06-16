@@ -7,9 +7,15 @@
     "precio": 4850000,
     "materiales": ["Oro blanco 18k", "Esmeralda colombiana", "Diamantes VS1"],
     "descripcion": "Una esmeralda central de 2.1 quilates envuelta en un halo de diamantes. Cada faceta captura la luz con la intensidad de una aurora polar.",
-    "imagenes": ["https://placehold.co/800x1000/F2F2F0/3A3A38?text=Aurora+Boreal"],
+    "imagenes": [
+      "https://placehold.co/800x1000/1A1A18/FDFDFB?text=Aurora+Boreal&font=playfair-display",
+      "https://placehold.co/800x1000/F2F2F0/1A1A18?text=Detalle&font=playfair-display",
+      "https://placehold.co/800x1000/0E5E4A/FDFDFB?text=Lateral&font=playfair-display",
+      "https://placehold.co/800x1000/3A3A38/FDFDFB?text=En+mano&font=playfair-display"
+    ],
     "destacado": true,
-    "nuevo": true
+    "nuevo": true,
+    "tallas": ["5", "6", "7", "8", "9", "10"]
   },
   {
     "id": 2,
@@ -19,7 +25,11 @@
     "precio": 7200000,
     "materiales": ["Oro amarillo 18k", "Perlas Akoya", "Diamante solitario"],
     "descripcion": "Un hilo invisible de oro sostiene perlas Akoya seleccionadas a mano. El cierre oculto preserva la pureza de la linea.",
-    "imagenes": ["https://placehold.co/800x1000/F2F2F0/3A3A38?text=Linea+Celeste"],
+    "imagenes": [
+      "https://placehold.co/800x1000/1A1A18/FDFDFB?text=Linea+Celeste&font=playfair-display",
+      "https://placehold.co/800x1000/F2F2F0/1A1A18?text=Cierre&font=playfair-display",
+      "https://placehold.co/800x1000/B8B8B4/1A1A18?text=Perlas&font=playfair-display"
+    ],
     "destacado": true,
     "nuevo": false
   },
@@ -31,7 +41,11 @@
     "precio": 3100000,
     "materiales": ["Platino 950", "Diamantes talla pera", "Esmeralda"],
     "descripcion": "Pendientes de movimiento libre que oscilan con gracia. La talla pera maximiza el fuego interno de cada piedra.",
-    "imagenes": ["https://placehold.co/800x1000/F2F2F0/3A3A38?text=Gota+de+Rocio"],
+    "imagenes": [
+      "https://placehold.co/800x1000/1A1A18/FDFDFB?text=Gota+de+Rocio&font=playfair-display",
+      "https://placehold.co/800x1000/0E5E4A/FDFDFB?text=Par&font=playfair-display",
+      "https://placehold.co/800x1000/F2F2F0/1A1A18?text=Detalle&font=playfair-display"
+    ],
     "destacado": true,
     "nuevo": true
   },
@@ -41,11 +55,16 @@
     "nombre": "Eslabones Eternos",
     "categoria": "pulseras",
     "precio": 5600000,
-    "materiales": ["Oro rosa 18k", "Diamantes pavé"],
-    "descripcion": "Cada eslabón forjado individualmente y unido sin soldadura visible. El acabado satinado refleja la luz de forma aterciopelada.",
-    "imagenes": ["https://placehold.co/800x1000/F2F2F0/3A3A38?text=Eslabones+Eternos"],
+    "materiales": ["Oro rosa 18k", "Diamantes pave"],
+    "descripcion": "Cada eslabon forjado individualmente y unido sin soldadura visible. El acabado satinado refleja la luz de forma aterciopelada.",
+    "imagenes": [
+      "https://placehold.co/800x1000/1A1A18/FDFDFB?text=Eslabones+Eternos&font=playfair-display",
+      "https://placehold.co/800x1000/8B6F5E/FDFDFB?text=Rosa&font=playfair-display",
+      "https://placehold.co/800x1000/F2F2F0/1A1A18?text=Cierre&font=playfair-display"
+    ],
     "destacado": true,
-    "nuevo": false
+    "nuevo": false,
+    "tallas": ["S — 15cm", "M — 17cm", "L — 19cm"]
   },
   {
     "id": 5,
@@ -54,10 +73,15 @@
     "categoria": "anillos",
     "precio": 2900000,
     "materiales": ["Oro amarillo 18k", "Zafiro azul", "Diamantes"],
-    "descripcion": "Banda arqueada con un zafiro de Ceilán engastado en tensión. La geometría interna distribuye la presión sin garras visibles.",
-    "imagenes": ["https://placehold.co/800x1000/F2F2F0/3A3A38?text=Arco+Interior"],
+    "descripcion": "Banda arqueada con un zafiro de Ceilan engastado en tension. La geometria interna distribuye la presion sin garras visibles.",
+    "imagenes": [
+      "https://placehold.co/800x1000/1A1A18/FDFDFB?text=Arco+Interior&font=playfair-display",
+      "https://placehold.co/800x1000/1a3a5c/FDFDFB?text=Zafiro&font=playfair-display",
+      "https://placehold.co/800x1000/F2F2F0/1A1A18?text=Perfil&font=playfair-display"
+    ],
     "destacado": false,
-    "nuevo": true
+    "nuevo": true,
+    "tallas": ["5", "6", "7", "8", "9", "10"]
   },
   {
     "id": 6,
@@ -66,8 +90,13 @@
     "categoria": "collares",
     "precio": 8900000,
     "materiales": ["Oro blanco 18k", "Diamantes talla brillante", "Cadena veneciana"],
-    "descripcion": "Siete diamantes dispuestos en la formación de la Osa Mayor. Cada piedra se mueve independientemente sobre micro-articulaciones.",
-    "imagenes": ["https://placehold.co/800x1000/F2F2F0/3A3A38?text=Constelacion"],
+    "descripcion": "Siete diamantes dispuestos en la formacion de la Osa Mayor. Cada piedra se mueve independientemente sobre micro-articulaciones.",
+    "imagenes": [
+      "https://placehold.co/800x1000/1A1A18/FDFDFB?text=Constelacion&font=playfair-display",
+      "https://placehold.co/800x1000/0a0a2e/FDFDFB?text=Brillantes&font=playfair-display",
+      "https://placehold.co/800x1000/F2F2F0/1A1A18?text=Cadena&font=playfair-display",
+      "https://placehold.co/800x1000/3A3A38/FDFDFB?text=Puesto&font=playfair-display"
+    ],
     "destacado": true,
     "nuevo": false
   },
@@ -78,8 +107,12 @@
     "categoria": "aretes",
     "precio": 2400000,
     "materiales": ["Oro amarillo 18k", "Esmeralda baguette"],
-    "descripcion": "Silueta orgánica inspirada en la naturaleza clásica. El esmeralda baguette añade un destello vertical al movimiento.",
-    "imagenes": ["https://placehold.co/800x1000/F2F2F0/3A3A38?text=Hoja+de+Laurel"],
+    "descripcion": "Silueta organica inspirada en la naturaleza clasica. El esmeralda baguette anade un destello vertical al movimiento.",
+    "imagenes": [
+      "https://placehold.co/800x1000/1A1A18/FDFDFB?text=Hoja+de+Laurel&font=playfair-display",
+      "https://placehold.co/800x1000/0E5E4A/FDFDFB?text=Esmeralda&font=playfair-display",
+      "https://placehold.co/800x1000/F2F2F0/1A1A18?text=Par&font=playfair-display"
+    ],
     "destacado": false,
     "nuevo": false
   },
@@ -91,9 +124,14 @@
     "precio": 6300000,
     "materiales": ["Platino 950", "Diamantes talla princesa"],
     "descripcion": "Canal continuo de diamantes talla princesa perfectamente calibrados. El cierre de seguridad doble es invisible al ojo.",
-    "imagenes": ["https://placehold.co/800x1000/F2F2F0/3A3A38?text=Rio+de+Luz"],
+    "imagenes": [
+      "https://placehold.co/800x1000/1A1A18/FDFDFB?text=Rio+de+Luz&font=playfair-display",
+      "https://placehold.co/800x1000/B8B8B4/1A1A18?text=Canal&font=playfair-display",
+      "https://placehold.co/800x1000/F2F2F0/1A1A18?text=Cierre&font=playfair-display"
+    ],
     "destacado": false,
-    "nuevo": true
+    "nuevo": true,
+    "tallas": ["S — 15cm", "M — 17cm", "L — 19cm"]
   },
   {
     "id": 9,
@@ -102,10 +140,15 @@
     "categoria": "anillos",
     "precio": 3750000,
     "materiales": ["Oro rosa 18k", "Diamantes VS2"],
-    "descripcion": "Dos bandas entrelazadas en un nudo continuo sin principio ni final. Simbolismo eterno ejecutado con precisión milimétrica.",
-    "imagenes": ["https://placehold.co/800x1000/F2F2F0/3A3A38?text=Nudo+Infinito"],
+    "descripcion": "Dos bandas entrelazadas en un nudo continuo sin principio ni final. Simbolismo eterno ejecutado con precision milimetrica.",
+    "imagenes": [
+      "https://placehold.co/800x1000/1A1A18/FDFDFB?text=Nudo+Infinito&font=playfair-display",
+      "https://placehold.co/800x1000/8B6F5E/FDFDFB?text=Rosa&font=playfair-display",
+      "https://placehold.co/800x1000/F2F2F0/1A1A18?text=Entrelazado&font=playfair-display"
+    ],
     "destacado": true,
-    "nuevo": false
+    "nuevo": false,
+    "tallas": ["5", "6", "7", "8", "9", "10"]
   },
   {
     "id": 10,
@@ -113,9 +156,14 @@
     "nombre": "Cadena Imperial",
     "categoria": "collares",
     "precio": 12500000,
-    "materiales": ["Oro amarillo 22k", "Rubí birmano", "Diamantes"],
-    "descripcion": "Collar de gala con rubí central de origen birmano certificado. La cadena trenzada a mano requiere 40 horas de trabajo artesanal.",
-    "imagenes": ["https://placehold.co/800x1000/F2F2F0/3A3A38?text=Cadena+Imperial"],
+    "materiales": ["Oro amarillo 22k", "Rubi birmano", "Diamantes"],
+    "descripcion": "Collar de gala con rubi central de origen birmano certificado. La cadena trenzada a mano requiere 40 horas de trabajo artesanal.",
+    "imagenes": [
+      "https://placehold.co/800x1000/1A1A18/FDFDFB?text=Cadena+Imperial&font=playfair-display",
+      "https://placehold.co/800x1000/5c1a1a/FDFDFB?text=Rubi&font=playfair-display",
+      "https://placehold.co/800x1000/F2F2F0/1A1A18?text=Trenzado&font=playfair-display",
+      "https://placehold.co/800x1000/3A3A38/FDFDFB?text=Gala&font=playfair-display"
+    ],
     "destacado": false,
     "nuevo": false
   },
@@ -125,9 +173,13 @@
     "nombre": "Media Luna",
     "categoria": "aretes",
     "precio": 1800000,
-    "materiales": ["Oro blanco 18k", "Diamantes pavé"],
-    "descripcion": "Arco de medio circulo cubierto en pavé de diamantes. La curvatura sigue la anatomía del lóbulo para un ajuste perfecto.",
-    "imagenes": ["https://placehold.co/800x1000/F2F2F0/3A3A38?text=Media+Luna"],
+    "materiales": ["Oro blanco 18k", "Diamantes pave"],
+    "descripcion": "Arco de medio circulo cubierto en pave de diamantes. La curvatura sigue la anatomia del lobulo para un ajuste perfecto.",
+    "imagenes": [
+      "https://placehold.co/800x1000/1A1A18/FDFDFB?text=Media+Luna&font=playfair-display",
+      "https://placehold.co/800x1000/B8B8B4/1A1A18?text=Pave&font=playfair-display",
+      "https://placehold.co/800x1000/F2F2F0/1A1A18?text=Perfil&font=playfair-display"
+    ],
     "destacado": false,
     "nuevo": true
   },
@@ -137,10 +189,15 @@
     "nombre": "Seda Dorada",
     "categoria": "pulseras",
     "precio": 4100000,
-    "materiales": ["Oro amarillo 18k", "Cierre magnético oculto"],
-    "descripcion": "Malla milanesa tejida con hilos de oro de 0.3mm. La flexibilidad del tejido imita la caída de la seda sobre la muñeca.",
-    "imagenes": ["https://placehold.co/800x1000/F2F2F0/3A3A38?text=Seda+Dorada"],
+    "materiales": ["Oro amarillo 18k", "Cierre magnetico oculto"],
+    "descripcion": "Malla milanesa tejida con hilos de oro de 0.3mm. La flexibilidad del tejido imita la caida de la seda sobre la muneca.",
+    "imagenes": [
+      "https://placehold.co/800x1000/1A1A18/FDFDFB?text=Seda+Dorada&font=playfair-display",
+      "https://placehold.co/800x1000/8B6F5E/FDFDFB?text=Tejido&font=playfair-display",
+      "https://placehold.co/800x1000/F2F2F0/1A1A18?text=Magnetico&font=playfair-display"
+    ],
     "destacado": false,
-    "nuevo": false
+    "nuevo": false,
+    "tallas": ["S — 15cm", "M — 17cm", "L — 19cm"]
   }
 ]

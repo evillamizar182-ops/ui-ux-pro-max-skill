@@ -9,4 +9,5 @@ export interface Product {
   imagenes: string[];
   destacado: boolean;
   nuevo: boolean;
+  tallas?: string[];
 }

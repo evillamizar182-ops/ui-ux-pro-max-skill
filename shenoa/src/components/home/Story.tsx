@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Story() {
   const sectionRef = useRef<HTMLElement>(null);
-  const textRef = useRef<HTMLParagraphElement>(null);
+  const quoteRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
     () => {
@@ -18,17 +18,22 @@ export default function Story() {
       ).matches;
       if (prefersReduced) return;
 
+      const words = quoteRef.current?.querySelectorAll("[data-word]");
+      if (!words) return;
+
       gsap.fromTo(
-        textRef.current,
-        { opacity: 0, y: 30 },
+        words,
+        { opacity: 0.1 },
         {
           opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: "power3.out",
+          duration: 0.3,
+          stagger: 0.04,
+          ease: "power2.out",
           scrollTrigger: {
-            trigger: textRef.current,
+            trigger: quoteRef.current,
             start: "top 80%",
+            end: "bottom 60%",
+            scrub: true,
           },
         }
       );
@@ -36,25 +41,35 @@ export default function Story() {
     { scope: sectionRef }
   );
 
+  const text =
+    "Desde las minas de Muzo hasta las manos de nuestros maestros orfebres, cada pieza de Shenoa nace de la tierra colombiana y cobra vida a traves de generaciones de conocimiento artesanal. No creamos joyas — preservamos momentos eternos.";
+
+  const words = text.split(" ");
+
   return (
     <section
       ref={sectionRef}
-      className="py-20 md:py-32 lg:py-40 px-6 md:px-10"
+      className="py-24 md:py-40 lg:py-48 px-6 md:px-10"
     >
-      <div className="max-w-3xl mx-auto text-center">
-        <span className="text-eyebrow text-esmeralda block mb-8">
+      <div className="max-w-4xl mx-auto text-center">
+        <span className="text-eyebrow text-esmeralda block mb-10">
           Nuestra historia
         </span>
-        <p
-          ref={textRef}
-          className="font-display text-2xl sm:text-3xl md:text-4xl italic leading-snug text-negro-tinta opacity-0"
-          style={{ maxWidth: "60ch", margin: "0 auto" }}
-        >
-          Desde las minas de Muzo hasta las manos de nuestros maestros
-          orfebres, cada pieza de Shenoa nace de la tierra colombiana y cobra
-          vida a traves de generaciones de conocimiento artesanal. No creamos
-          joyas — preservamos momentos eternos.
-        </p>
+
+        <div ref={quoteRef}>
+          <p
+            className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-[42px] italic leading-snug"
+            style={{ lineHeight: 1.4 }}
+          >
+            {words.map((word, i) => (
+              <span key={i} data-word className="inline-block mr-[0.3em]">
+                {word}
+              </span>
+            ))}
+          </p>
+        </div>
+
+        <span className="block w-12 h-[1px] bg-gris-piedra mx-auto mt-12" />
       </div>
     </section>
   );

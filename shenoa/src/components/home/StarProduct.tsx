@@ -13,6 +13,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function StarProduct() {
   const sectionRef = useRef<HTMLElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
+  const revealRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
 
   const star = getFeatured()[0];
@@ -24,6 +25,20 @@ export default function StarProduct() {
         "(prefers-reduced-motion: reduce)"
       ).matches;
       if (prefersReduced) return;
+
+      gsap.fromTo(
+        revealRef.current,
+        { scaleX: 1 },
+        {
+          scaleX: 0,
+          duration: 0.8,
+          ease: "power4.inOut",
+          scrollTrigger: {
+            trigger: imageRef.current,
+            start: "top 75%",
+          },
+        }
+      );
 
       gsap.to(imageRef.current?.querySelector("img") ?? [], {
         yPercent: -8,
@@ -42,8 +57,8 @@ export default function StarProduct() {
         {
           opacity: 1,
           y: 0,
-          duration: 0.7,
-          stagger: 0.1,
+          duration: 0.6,
+          stagger: 0.08,
           ease: "power3.out",
           scrollTrigger: {
             trigger: textRef.current,
@@ -73,38 +88,39 @@ export default function StarProduct() {
             sizes="(max-width: 1024px) 100vw, 50vw"
             loading="lazy"
           />
+          <div
+            ref={revealRef}
+            className="absolute inset-0 bg-gris-niebla origin-right z-10"
+          />
         </div>
 
         <div ref={textRef}>
-          <span className="text-eyebrow text-esmeralda block mb-4">
+          <span className="text-eyebrow text-esmeralda block mb-4 opacity-0">
             Pieza estrella
           </span>
-          <h2 className="font-display text-4xl sm:text-5xl md:text-6xl mb-6">
+          <h2 className="font-display text-4xl sm:text-5xl md:text-6xl mb-4 opacity-0">
             {star.nombre}
           </h2>
-          <p className="text-gris-carbon leading-relaxed mb-8 max-w-lg">
+          <p className="font-display text-2xl text-esmeralda mb-6 opacity-0">
+            {formatPrice(star.precio)}
+          </p>
+          <p className="text-gris-carbon leading-relaxed mb-8 max-w-lg opacity-0">
             {star.descripcion}
           </p>
 
-          <ul className="space-y-3 mb-10 border-t border-gris-piedra pt-6">
+          <ul className="space-y-3 mb-10 border-t border-gris-piedra pt-6 opacity-0">
             {star.materiales.map((mat) => (
               <li
                 key={mat}
-                className="flex items-center justify-between text-sm border-b border-gris-piedra/40 pb-3"
+                className="flex items-center justify-between text-sm border-b border-gris-piedra/30 pb-3"
               >
                 <span className="text-gris-carbon">Material</span>
                 <span className="font-body font-normal">{mat}</span>
               </li>
             ))}
-            <li className="flex items-center justify-between text-sm pt-1">
-              <span className="text-gris-carbon">Precio</span>
-              <span className="font-display text-2xl">
-                {formatPrice(star.precio)}
-              </span>
-            </li>
           </ul>
 
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 opacity-0">
             <Button
               href={`https://wa.me/573225518530?text=${encodeURIComponent(
                 `Hola, me interesa la pieza "${star.nombre}" (${formatPrice(star.precio)})`
