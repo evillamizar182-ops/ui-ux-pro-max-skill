@@ -1,0 +1,189 @@
+[
+  {
+    "id": 1,
+    "slug": "anillo-aurora-boreal",
+    "nombre": "Aurora Boreal",
+    "categoria": "anillos",
+    "precio": 4850000,
+    "materiales": ["Oro blanco 18k", "Esmeralda colombiana", "Diamantes VS1"],
+    "descripcion": "Una esmeralda central de 2.1 quilates envuelta en un halo de diamantes. Cada faceta captura la luz con la intensidad de una aurora polar.",
+    "imagenes": [
+      "https://images.pexels.com/photos/2735981/pexels-photo-2735981.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop",
+      "https://images.pexels.com/photos/2732096/pexels-photo-2732096.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop",
+      "https://images.pexels.com/photos/32792084/pexels-photo-32792084.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop"
+    ],
+    "destacado": true,
+    "nuevo": true,
+    "tallas": ["5", "6", "7", "8", "9", "10"]
+  },
+  {
+    "id": 2,
+    "slug": "collar-linea-celeste",
+    "nombre": "Linea Celeste",
+    "categoria": "collares",
+    "precio": 7200000,
+    "materiales": ["Oro amarillo 18k", "Perlas Akoya", "Diamante solitario"],
+    "descripcion": "Un hilo invisible de oro sostiene perlas Akoya seleccionadas a mano. El cierre oculto preserva la pureza de la linea.",
+    "imagenes": [
+      "https://images.pexels.com/photos/12495610/pexels-photo-12495610.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop",
+      "https://images.pexels.com/photos/17298688/pexels-photo-17298688.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop"
+    ],
+    "destacado": true,
+    "nuevo": false
+  },
+  {
+    "id": 3,
+    "slug": "aretes-gota-de-rocio",
+    "nombre": "Gota de Rocio",
+    "categoria": "aretes",
+    "precio": 3100000,
+    "materiales": ["Platino 950", "Diamantes talla pera", "Esmeralda"],
+    "descripcion": "Pendientes de movimiento libre que oscilan con gracia. La talla pera maximiza el fuego interno de cada piedra.",
+    "imagenes": [
+      "https://images.pexels.com/photos/1395306/pexels-photo-1395306.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop",
+      "https://images.pexels.com/photos/6098251/pexels-photo-6098251.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop"
+    ],
+    "destacado": true,
+    "nuevo": true
+  },
+  {
+    "id": 4,
+    "slug": "pulsera-eslabones-eternos",
+    "nombre": "Eslabones Eternos",
+    "categoria": "pulseras",
+    "precio": 5600000,
+    "materiales": ["Oro rosa 18k", "Diamantes pave"],
+    "descripcion": "Cada eslabon forjado individualmente y unido sin soldadura visible. El acabado satinado refleja la luz de forma aterciopelada.",
+    "imagenes": [
+      "https://images.pexels.com/photos/6262842/pexels-photo-6262842.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop",
+      "https://images.pexels.com/photos/14058109/pexels-photo-14058109.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop"
+    ],
+    "destacado": true,
+    "nuevo": false,
+    "tallas": ["S — 15cm", "M — 17cm", "L — 19cm"]
+  },
+  {
+    "id": 5,
+    "slug": "anillo-arco-interior",
+    "nombre": "Arco Interior",
+    "categoria": "anillos",
+    "precio": 2900000,
+    "materiales": ["Oro amarillo 18k", "Zafiro azul", "Diamantes"],
+    "descripcion": "Banda arqueada con un zafiro de Ceilan engastado en tension. La geometria interna distribuye la presion sin garras visibles.",
+    "imagenes": [
+      "https://images.pexels.com/photos/14058109/pexels-photo-14058109.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop",
+      "https://images.pexels.com/photos/2735981/pexels-photo-2735981.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop"
+    ],
+    "destacado": false,
+    "nuevo": true,
+    "tallas": ["5", "6", "7", "8", "9", "10"]
+  },
+  {
+    "id": 6,
+    "slug": "collar-constelacion",
+    "nombre": "Constelacion",
+    "categoria": "collares",
+    "precio": 8900000,
+    "materiales": ["Oro blanco 18k", "Diamantes talla brillante", "Cadena veneciana"],
+    "descripcion": "Siete diamantes dispuestos en la formacion de la Osa Mayor. Cada piedra se mueve independientemente sobre micro-articulaciones.",
+    "imagenes": [
+      "https://images.pexels.com/photos/15491851/pexels-photo-15491851.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop",
+      "https://images.pexels.com/photos/12495610/pexels-photo-12495610.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop"
+    ],
+    "destacado": true,
+    "nuevo": false
+  },
+  {
+    "id": 7,
+    "slug": "aretes-hoja-de-laurel",
+    "nombre": "Hoja de Laurel",
+    "categoria": "aretes",
+    "precio": 2400000,
+    "materiales": ["Oro amarillo 18k", "Esmeralda baguette"],
+    "descripcion": "Silueta organica inspirada en la naturaleza clasica. El esmeralda baguette anade un destello vertical al movimiento.",
+    "imagenes": [
+      "https://images.pexels.com/photos/20858959/pexels-photo-20858959.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop",
+      "https://images.pexels.com/photos/1395306/pexels-photo-1395306.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop"
+    ],
+    "destacado": false,
+    "nuevo": false
+  },
+  {
+    "id": 8,
+    "slug": "pulsera-rio-de-luz",
+    "nombre": "Rio de Luz",
+    "categoria": "pulseras",
+    "precio": 6300000,
+    "materiales": ["Platino 950", "Diamantes talla princesa"],
+    "descripcion": "Canal continuo de diamantes talla princesa perfectamente calibrados. El cierre de seguridad doble es invisible al ojo.",
+    "imagenes": [
+      "https://images.pexels.com/photos/32792084/pexels-photo-32792084.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop",
+      "https://images.pexels.com/photos/6262842/pexels-photo-6262842.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop"
+    ],
+    "destacado": false,
+    "nuevo": true,
+    "tallas": ["S — 15cm", "M — 17cm", "L — 19cm"]
+  },
+  {
+    "id": 9,
+    "slug": "anillo-nudo-infinito",
+    "nombre": "Nudo Infinito",
+    "categoria": "anillos",
+    "precio": 3750000,
+    "materiales": ["Oro rosa 18k", "Diamantes VS2"],
+    "descripcion": "Dos bandas entrelazadas en un nudo continuo sin principio ni final. Simbolismo eterno ejecutado con precision milimetrica.",
+    "imagenes": [
+      "https://images.pexels.com/photos/115567/pexels-photo-115567.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop",
+      "https://images.pexels.com/photos/2732096/pexels-photo-2732096.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop"
+    ],
+    "destacado": true,
+    "nuevo": false,
+    "tallas": ["5", "6", "7", "8", "9", "10"]
+  },
+  {
+    "id": 10,
+    "slug": "collar-cadena-imperial",
+    "nombre": "Cadena Imperial",
+    "categoria": "collares",
+    "precio": 12500000,
+    "materiales": ["Oro amarillo 22k", "Rubi birmano", "Diamantes"],
+    "descripcion": "Collar de gala con rubi central de origen birmano certificado. La cadena trenzada a mano requiere 40 horas de trabajo artesanal.",
+    "imagenes": [
+      "https://images.pexels.com/photos/17298688/pexels-photo-17298688.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop",
+      "https://images.pexels.com/photos/15491851/pexels-photo-15491851.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop"
+    ],
+    "destacado": false,
+    "nuevo": false
+  },
+  {
+    "id": 11,
+    "slug": "aretes-media-luna",
+    "nombre": "Media Luna",
+    "categoria": "aretes",
+    "precio": 1800000,
+    "materiales": ["Oro blanco 18k", "Diamantes pave"],
+    "descripcion": "Arco de medio circulo cubierto en pave de diamantes. La curvatura sigue la anatomia del lobulo para un ajuste perfecto.",
+    "imagenes": [
+      "https://images.pexels.com/photos/6098251/pexels-photo-6098251.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop",
+      "https://images.pexels.com/photos/20858959/pexels-photo-20858959.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop"
+    ],
+    "destacado": false,
+    "nuevo": true
+  },
+  {
+    "id": 12,
+    "slug": "pulsera-seda-dorada",
+    "nombre": "Seda Dorada",
+    "categoria": "pulseras",
+    "precio": 4100000,
+    "materiales": ["Oro amarillo 18k", "Cierre magnetico oculto"],
+    "descripcion": "Malla milanesa tejida con hilos de oro de 0.3mm. La flexibilidad del tejido imita la caida de la seda sobre la muneca.",
+    "imagenes": [
+      "https://images.pexels.com/photos/12495610/pexels-photo-12495610.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop",
+      "https://images.pexels.com/photos/6262842/pexels-photo-6262842.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop"
+    ],
+    "destacado": false,
+    "nuevo": false,
+    "tallas": ["S — 15cm", "M — 17cm", "L — 19cm"]
+  }
+]
