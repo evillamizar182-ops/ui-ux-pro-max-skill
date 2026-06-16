@@ -1,9 +1,8 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight } from "lucide-react";
@@ -15,11 +14,8 @@ gsap.registerPlugin(ScrollTrigger);
 export default function ProductCard({ product, index = 0 }: { product: Product; index?: number }) {
   const cardRef = useRef<HTMLAnchorElement>(null);
 
-  useGSAP(
-    () => {
-      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (prefersReduced) return;
-
+  useEffect(() => {
+    const ctx = gsap.context(() => {
       gsap.fromTo(
         cardRef.current,
         { opacity: 0, y: 60, scale: 0.96 },
@@ -29,9 +25,9 @@ export default function ProductCard({ product, index = 0 }: { product: Product; 
           scrollTrigger: { trigger: cardRef.current, start: "top 85%", toggleActions: "play none none reverse" },
         }
       );
-    },
-    { scope: cardRef }
-  );
+    }, cardRef);
+    return () => ctx.revert();
+  }, [index]);
 
   return (
     <Link ref={cardRef} href={`/producto/${product.slug}`} className="group block">

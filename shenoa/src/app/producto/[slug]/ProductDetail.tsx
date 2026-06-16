@@ -1,8 +1,7 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
-import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { Heart, MessageCircle, ChevronLeft, ChevronRight } from "lucide-react";
 import type { Product } from "@/types/product";
@@ -18,17 +17,15 @@ export default function ProductDetail({ product, related }: { product: Product; 
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
   const touchStartX = useRef(0);
 
-  useGSAP(
-    () => {
-      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (prefersReduced) return;
+  useEffect(() => {
+    const ctx = gsap.context(() => {
       const items = pageRef.current?.querySelectorAll("[data-anim]");
       if (items) {
         gsap.fromTo(items, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, stagger: 0.08, ease: "power3.out", delay: 0.15 });
       }
-    },
-    { scope: pageRef }
-  );
+    }, pageRef);
+    return () => ctx.revert();
+  }, []);
 
   const changeImage = (index: number) => {
     if (index === activeImage) return;

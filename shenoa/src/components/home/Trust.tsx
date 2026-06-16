@@ -1,7 +1,6 @@
 "use client";
 
-import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
+import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ShieldCheck, Truck, Award, Gem } from "lucide-react";
@@ -18,11 +17,8 @@ const items = [
 export default function Trust() {
   const sectionRef = useRef<HTMLElement>(null);
 
-  useGSAP(
-    () => {
-      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (prefersReduced) return;
-
+  useEffect(() => {
+    const ctx = gsap.context(() => {
       const cards = sectionRef.current?.querySelectorAll("[data-trust]");
       if (cards) {
         gsap.fromTo(cards, { opacity: 0, y: 40 }, {
@@ -30,9 +26,9 @@ export default function Trust() {
           scrollTrigger: { trigger: sectionRef.current, start: "top 75%" },
         });
       }
-    },
-    { scope: sectionRef }
-  );
+    }, sectionRef);
+    return () => ctx.revert();
+  }, []);
 
   return (
     <section ref={sectionRef} className="py-20 md:py-32 lg:py-40 px-6 md:px-10 bg-gris-niebla">

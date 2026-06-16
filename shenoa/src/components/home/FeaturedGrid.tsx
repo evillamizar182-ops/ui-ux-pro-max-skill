@@ -1,7 +1,6 @@
 "use client";
 
-import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
+import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { getFeatured } from "@/lib/products";
@@ -14,11 +13,8 @@ export default function FeaturedGrid() {
 
   const featured = getFeatured();
 
-  useGSAP(
-    () => {
-      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (prefersReduced) return;
-
+  useEffect(() => {
+    const ctx = gsap.context(() => {
       const title = sectionRef.current?.querySelector("[data-title]");
       if (title) {
         gsap.fromTo(title.children, { opacity: 0, y: 30 }, {
@@ -26,9 +22,9 @@ export default function FeaturedGrid() {
           scrollTrigger: { trigger: title, start: "top 85%" },
         });
       }
-    },
-    { scope: sectionRef }
-  );
+    }, sectionRef);
+    return () => ctx.revert();
+  }, []);
 
   return (
     <section ref={sectionRef} className="py-20 md:py-32 lg:py-40 px-6 md:px-10">

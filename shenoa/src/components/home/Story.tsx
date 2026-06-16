@@ -1,7 +1,6 @@
 "use client";
 
-import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
+import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -11,11 +10,8 @@ export default function Story() {
   const sectionRef = useRef<HTMLElement>(null);
   const quoteRef = useRef<HTMLDivElement>(null);
 
-  useGSAP(
-    () => {
-      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (prefersReduced) return;
-
+  useEffect(() => {
+    const ctx = gsap.context(() => {
       const words = quoteRef.current?.querySelectorAll("[data-word]");
       if (words) {
         gsap.fromTo(words, { opacity: 0.15 }, {
@@ -23,9 +19,9 @@ export default function Story() {
           scrollTrigger: { trigger: quoteRef.current, start: "top 80%", end: "bottom 60%", scrub: true },
         });
       }
-    },
-    { scope: sectionRef }
-  );
+    }, sectionRef);
+    return () => ctx.revert();
+  }, []);
 
   const words = "Desde las minas de Muzo hasta las manos de nuestros maestros orfebres, cada pieza de Shenoa nace de la tierra colombiana y cobra vida a traves de generaciones de conocimiento artesanal. No creamos joyas — preservamos momentos eternos.".split(" ");
 

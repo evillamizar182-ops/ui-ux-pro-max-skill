@@ -1,9 +1,8 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight } from "lucide-react";
@@ -37,11 +36,8 @@ const collections = [
 export default function Collections() {
   const sectionRef = useRef<HTMLElement>(null);
 
-  useGSAP(
-    () => {
-      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (prefersReduced) return;
-
+  useEffect(() => {
+    const ctx = gsap.context(() => {
       const title = sectionRef.current?.querySelector("[data-title]");
       if (title) {
         gsap.fromTo(title.children, { opacity: 0, y: 30 }, {
@@ -56,9 +52,9 @@ export default function Collections() {
           scrollTrigger: { trigger: card, start: "top 88%" },
         });
       });
-    },
-    { scope: sectionRef }
-  );
+    }, sectionRef);
+    return () => ctx.revert();
+  }, []);
 
   return (
     <section ref={sectionRef} className="py-20 md:py-32 lg:py-40 px-6 md:px-10 bg-gris-niebla">

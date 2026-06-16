@@ -1,8 +1,7 @@
 "use client";
 
-import { useRef, useState, useMemo, useCallback } from "react";
+import { useRef, useState, useMemo, useCallback, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { getAll } from "@/lib/products";
@@ -70,11 +69,6 @@ export default function CollectionContent({
 
   const animateGrid = useCallback(() => {
     if (!gridRef.current) return;
-    const prefersReduced = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-    if (prefersReduced) return;
-
     const cards = gridRef.current.querySelectorAll("[data-card]");
     gsap.fromTo(
       cards,
@@ -95,11 +89,8 @@ export default function CollectionContent({
       if (cat === activeCat) return;
 
       const cards = gridRef.current?.querySelectorAll("[data-card]");
-      const prefersReduced = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches;
 
-      if (!cards?.length || prefersReduced) {
+      if (!cards?.length) {
         setActiveCat(cat);
         if (cat !== "todas") router.replace(`/coleccion/${cat}`, { scroll: false });
         return;
@@ -124,11 +115,8 @@ export default function CollectionContent({
   const handleFilterChange = useCallback(
     (setter: () => void) => {
       const cards = gridRef.current?.querySelectorAll("[data-card]");
-      const prefersReduced = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches;
 
-      if (!cards?.length || prefersReduced) {
+      if (!cards?.length) {
         setter();
         return;
       }
@@ -148,13 +136,8 @@ export default function CollectionContent({
     [animateGrid]
   );
 
-  useGSAP(
-    () => {
-      const prefersReduced = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches;
-      if (prefersReduced) return;
-
+  useEffect(() => {
+    const ctx = gsap.context(() => {
       gsap.fromTo(
         headerRef.current?.children ?? [],
         { opacity: 0, y: 30 },
@@ -166,9 +149,9 @@ export default function CollectionContent({
           ease: "power3.out",
         }
       );
-    },
-    { scope: headerRef }
-  );
+    }, headerRef);
+    return () => ctx.revert();
+  }, []);
 
   return (
     <main className="pt-24 md:pt-32 pb-20 md:pb-32 px-6 md:px-10">

@@ -1,8 +1,7 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import Image from "next/image";
-import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Button from "@/components/ui/Button";
@@ -14,13 +13,8 @@ export default function Hero() {
   const contentRef = useRef<HTMLDivElement>(null);
   const lineRef = useRef<HTMLSpanElement>(null);
 
-  useGSAP(
-    () => {
-      const prefersReduced = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches;
-      if (prefersReduced) return;
-
+  useEffect(() => {
+    const ctx = gsap.context(() => {
       const els = contentRef.current?.children;
       if (els) {
         gsap.fromTo(
@@ -47,9 +41,9 @@ export default function Hero() {
           scrub: true,
         },
       });
-    },
-    { scope: sectionRef }
-  );
+    }, sectionRef);
+    return () => ctx.revert();
+  }, []);
 
   return (
     <section

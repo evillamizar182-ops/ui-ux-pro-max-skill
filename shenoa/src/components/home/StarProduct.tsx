@@ -1,8 +1,7 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import Image from "next/image";
-import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { getFeatured, formatPrice } from "@/lib/products";
@@ -12,15 +11,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function StarProduct() {
   const sectionRef = useRef<HTMLElement>(null);
-
   const star = getFeatured()[0];
-  if (!star) return null;
 
-  useGSAP(
-    () => {
-      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (prefersReduced) return;
-
+  useEffect(() => {
+    if (!star) return;
+    const ctx = gsap.context(() => {
       const img = sectionRef.current?.querySelector("[data-img]");
       if (img) {
         gsap.fromTo(img, { opacity: 0, x: -40 }, {
@@ -36,9 +31,11 @@ export default function StarProduct() {
           scrollTrigger: { trigger: items[0], start: "top 80%" },
         });
       }
-    },
-    { scope: sectionRef }
-  );
+    }, sectionRef);
+    return () => ctx.revert();
+  }, [star]);
+
+  if (!star) return null;
 
   return (
     <section ref={sectionRef} className="py-20 md:py-32 lg:py-40 px-6 md:px-10">
