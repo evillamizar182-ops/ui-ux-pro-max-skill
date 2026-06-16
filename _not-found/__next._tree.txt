@@ -1,0 +1,2 @@
+:HL["/ui-ux-pro-max-skill/_next/static/chunks/41r92h7maru7v.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"MvIvjcKbV_IW6JwIbACeO"}

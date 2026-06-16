@@ -1,0 +1,4 @@
+:HL["/ui-ux-pro-max-skill/_next/static/chunks/41r92h7maru7v.css","style"]
+:HL["/ui-ux-pro-max-skill/_next/static/media/01e4147cff8141ee-s.p.3huc2loe0ie8a.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/ui-ux-pro-max-skill/_next/static/media/81cef6a21128489e-s.p.2csanl8cs02r-.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"producto","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"collar-constelacion","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"MvIvjcKbV_IW6JwIbACeO"}

@@ -1,0 +1,10 @@
+1:"$Sreact.fragment"
+2:I[2847,["/ui-ux-pro-max-skill/_next/static/chunks/05-c3ty_6dwfk.js","/ui-ux-pro-max-skill/_next/static/chunks/14mrh2-p_w84d.js","/ui-ux-pro-max-skill/_next/static/chunks/2tboglaedyn_3.js","/ui-ux-pro-max-skill/_next/static/chunks/3nzht829l9mtk.js"],"default"]
+3:I[3265,["/ui-ux-pro-max-skill/_next/static/chunks/05-c3ty_6dwfk.js","/ui-ux-pro-max-skill/_next/static/chunks/14mrh2-p_w84d.js","/ui-ux-pro-max-skill/_next/static/chunks/2tboglaedyn_3.js","/ui-ux-pro-max-skill/_next/static/chunks/3nzht829l9mtk.js"],"default"]
+4:I[81828,["/ui-ux-pro-max-skill/_next/static/chunks/05-c3ty_6dwfk.js","/ui-ux-pro-max-skill/_next/static/chunks/14mrh2-p_w84d.js","/ui-ux-pro-max-skill/_next/static/chunks/2tboglaedyn_3.js","/ui-ux-pro-max-skill/_next/static/chunks/3nzht829l9mtk.js"],"default"]
+5:I[58234,["/ui-ux-pro-max-skill/_next/static/chunks/05-c3ty_6dwfk.js","/ui-ux-pro-max-skill/_next/static/chunks/14mrh2-p_w84d.js","/ui-ux-pro-max-skill/_next/static/chunks/2tboglaedyn_3.js","/ui-ux-pro-max-skill/_next/static/chunks/3nzht829l9mtk.js"],"default"]
+6:I[81041,["/ui-ux-pro-max-skill/_next/static/chunks/05-c3ty_6dwfk.js","/ui-ux-pro-max-skill/_next/static/chunks/14mrh2-p_w84d.js","/ui-ux-pro-max-skill/_next/static/chunks/2tboglaedyn_3.js","/ui-ux-pro-max-skill/_next/static/chunks/3nzht829l9mtk.js"],"default"]
+7:I[97367,["/ui-ux-pro-max-skill/_next/static/chunks/05-c3ty_6dwfk.js","/ui-ux-pro-max-skill/_next/static/chunks/14mrh2-p_w84d.js"],"OutletBoundary"]
+8:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":[["$","$L3",null,{}],["$","$L4",null,{"categoria":"aretes","title":"Aretes"}],["$","$L5",null,{}],["$","$L6",null,{}]]}],[["$","script","script-0",{"src":"/ui-ux-pro-max-skill/_next/static/chunks/2tboglaedyn_3.js","async":true}],["$","script","script-1",{"src":"/ui-ux-pro-max-skill/_next/static/chunks/3nzht829l9mtk.js","async":true}]],["$","$L7",null,{"children":["$","$8",null,{"name":"Next.MetadataOutlet","children":"$@9"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"MvIvjcKbV_IW6JwIbACeO"}
+9:null
