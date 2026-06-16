@@ -8,10 +8,9 @@
     "materiales": ["Oro blanco 18k", "Esmeralda colombiana", "Diamantes VS1"],
     "descripcion": "Una esmeralda central de 2.1 quilates envuelta en un halo de diamantes. Cada faceta captura la luz con la intensidad de una aurora polar.",
     "imagenes": [
-      "https://placehold.co/800x1000/1A1A18/FDFDFB?text=Aurora+Boreal&font=playfair-display",
-      "https://placehold.co/800x1000/F2F2F0/1A1A18?text=Detalle&font=playfair-display",
-      "https://placehold.co/800x1000/0E5E4A/FDFDFB?text=Lateral&font=playfair-display",
-      "https://placehold.co/800x1000/3A3A38/FDFDFB?text=En+mano&font=playfair-display"
+      "https://images.pexels.com/photos/2735981/pexels-photo-2735981.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop",
+      "https://images.pexels.com/photos/2732096/pexels-photo-2732096.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop",
+      "https://images.pexels.com/photos/32792084/pexels-photo-32792084.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop"
     ],
     "destacado": true,
     "nuevo": true,
@@ -26,9 +25,8 @@
     "materiales": ["Oro amarillo 18k", "Perlas Akoya", "Diamante solitario"],
     "descripcion": "Un hilo invisible de oro sostiene perlas Akoya seleccionadas a mano. El cierre oculto preserva la pureza de la linea.",
     "imagenes": [
-      "https://placehold.co/800x1000/1A1A18/FDFDFB?text=Linea+Celeste&font=playfair-display",
-      "https://placehold.co/800x1000/F2F2F0/1A1A18?text=Cierre&font=playfair-display",
-      "https://placehold.co/800x1000/B8B8B4/1A1A18?text=Perlas&font=playfair-display"
+      "https://images.pexels.com/photos/12495610/pexels-photo-12495610.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop",
+      "https://images.pexels.com/photos/17298688/pexels-photo-17298688.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop"
     ],
     "destacado": true,
     "nuevo": false
@@ -42,9 +40,8 @@
     "materiales": ["Platino 950", "Diamantes talla pera", "Esmeralda"],
     "descripcion": "Pendientes de movimiento libre que oscilan con gracia. La talla pera maximiza el fuego interno de cada piedra.",
     "imagenes": [
-      "https://placehold.co/800x1000/1A1A18/FDFDFB?text=Gota+de+Rocio&font=playfair-display",
-      "https://placehold.co/800x1000/0E5E4A/FDFDFB?text=Par&font=playfair-display",
-      "https://placehold.co/800x1000/F2F2F0/1A1A18?text=Detalle&font=playfair-display"
+      "https://images.pexels.com/photos/1395306/pexels-photo-1395306.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop",
+      "https://images.pexels.com/photos/6098251/pexels-photo-6098251.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop"
     ],
     "destacado": true,
     "nuevo": true
@@ -58,9 +55,8 @@
     "materiales": ["Oro rosa 18k", "Diamantes pave"],
     "descripcion": "Cada eslabon forjado individualmente y unido sin soldadura visible. El acabado satinado refleja la luz de forma aterciopelada.",
     "imagenes": [
-      "https://placehold.co/800x1000/1A1A18/FDFDFB?text=Eslabones+Eternos&font=playfair-display",
-      "https://placehold.co/800x1000/8B6F5E/FDFDFB?text=Rosa&font=playfair-display",
-      "https://placehold.co/800x1000/F2F2F0/1A1A18?text=Cierre&font=playfair-display"
+      "https://images.pexels.com/photos/6262842/pexels-photo-6262842.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop",
+      "https://images.pexels.com/photos/14058109/pexels-photo-14058109.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop"
     ],
     "destacado": true,
     "nuevo": false,
@@ -75,9 +71,8 @@
     "materiales": ["Oro amarillo 18k", "Zafiro azul", "Diamantes"],
     "descripcion": "Banda arqueada con un zafiro de Ceilan engastado en tension. La geometria interna distribuye la presion sin garras visibles.",
     "imagenes": [
-      "https://placehold.co/800x1000/1A1A18/FDFDFB?text=Arco+Interior&font=playfair-display",
-      "https://placehold.co/800x1000/1a3a5c/FDFDFB?text=Zafiro&font=playfair-display",
-      "https://placehold.co/800x1000/F2F2F0/1A1A18?text=Perfil&font=playfair-display"
+      "https://images.pexels.com/photos/14058109/pexels-photo-14058109.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop",
+      "https://images.pexels.com/photos/2735981/pexels-photo-2735981.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop"
     ],
     "destacado": false,
     "nuevo": true,
@@ -92,10 +87,8 @@
     "materiales": ["Oro blanco 18k", "Diamantes talla brillante", "Cadena veneciana"],
     "descripcion": "Siete diamantes dispuestos en la formacion de la Osa Mayor. Cada piedra se mueve independientemente sobre micro-articulaciones.",
     "imagenes": [
-      "https://placehold.co/800x1000/1A1A18/FDFDFB?text=Constelacion&font=playfair-display",
-      "https://placehold.co/800x1000/0a0a2e/FDFDFB?text=Brillantes&font=playfair-display",
-      "https://placehold.co/800x1000/F2F2F0/1A1A18?text=Cadena&font=playfair-display",
-      "https://placehold.co/800x1000/3A3A38/FDFDFB?text=Puesto&font=playfair-display"
+      "https://images.pexels.com/photos/15491851/pexels-photo-15491851.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop",
+      "https://images.pexels.com/photos/12495610/pexels-photo-12495610.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop"
     ],
     "destacado": true,
     "nuevo": false
@@ -109,9 +102,8 @@
     "materiales": ["Oro amarillo 18k", "Esmeralda baguette"],
     "descripcion": "Silueta organica inspirada en la naturaleza clasica. El esmeralda baguette anade un destello vertical al movimiento.",
     "imagenes": [
-      "https://placehold.co/800x1000/1A1A18/FDFDFB?text=Hoja+de+Laurel&font=playfair-display",
-      "https://placehold.co/800x1000/0E5E4A/FDFDFB?text=Esmeralda&font=playfair-display",
-      "https://placehold.co/800x1000/F2F2F0/1A1A18?text=Par&font=playfair-display"
+      "https://images.pexels.com/photos/20858959/pexels-photo-20858959.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop",
+      "https://images.pexels.com/photos/1395306/pexels-photo-1395306.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop"
     ],
     "destacado": false,
     "nuevo": false
@@ -125,9 +117,8 @@
     "materiales": ["Platino 950", "Diamantes talla princesa"],
     "descripcion": "Canal continuo de diamantes talla princesa perfectamente calibrados. El cierre de seguridad doble es invisible al ojo.",
     "imagenes": [
-      "https://placehold.co/800x1000/1A1A18/FDFDFB?text=Rio+de+Luz&font=playfair-display",
-      "https://placehold.co/800x1000/B8B8B4/1A1A18?text=Canal&font=playfair-display",
-      "https://placehold.co/800x1000/F2F2F0/1A1A18?text=Cierre&font=playfair-display"
+      "https://images.pexels.com/photos/32792084/pexels-photo-32792084.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop",
+      "https://images.pexels.com/photos/6262842/pexels-photo-6262842.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop"
     ],
     "destacado": false,
     "nuevo": true,
@@ -142,9 +133,8 @@
     "materiales": ["Oro rosa 18k", "Diamantes VS2"],
     "descripcion": "Dos bandas entrelazadas en un nudo continuo sin principio ni final. Simbolismo eterno ejecutado con precision milimetrica.",
     "imagenes": [
-      "https://placehold.co/800x1000/1A1A18/FDFDFB?text=Nudo+Infinito&font=playfair-display",
-      "https://placehold.co/800x1000/8B6F5E/FDFDFB?text=Rosa&font=playfair-display",
-      "https://placehold.co/800x1000/F2F2F0/1A1A18?text=Entrelazado&font=playfair-display"
+      "https://images.pexels.com/photos/115567/pexels-photo-115567.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop",
+      "https://images.pexels.com/photos/2732096/pexels-photo-2732096.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop"
     ],
     "destacado": true,
     "nuevo": false,
@@ -159,10 +149,8 @@
     "materiales": ["Oro amarillo 22k", "Rubi birmano", "Diamantes"],
     "descripcion": "Collar de gala con rubi central de origen birmano certificado. La cadena trenzada a mano requiere 40 horas de trabajo artesanal.",
     "imagenes": [
-      "https://placehold.co/800x1000/1A1A18/FDFDFB?text=Cadena+Imperial&font=playfair-display",
-      "https://placehold.co/800x1000/5c1a1a/FDFDFB?text=Rubi&font=playfair-display",
-      "https://placehold.co/800x1000/F2F2F0/1A1A18?text=Trenzado&font=playfair-display",
-      "https://placehold.co/800x1000/3A3A38/FDFDFB?text=Gala&font=playfair-display"
+      "https://images.pexels.com/photos/17298688/pexels-photo-17298688.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop",
+      "https://images.pexels.com/photos/15491851/pexels-photo-15491851.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop"
     ],
     "destacado": false,
     "nuevo": false
@@ -176,9 +164,8 @@
     "materiales": ["Oro blanco 18k", "Diamantes pave"],
     "descripcion": "Arco de medio circulo cubierto en pave de diamantes. La curvatura sigue la anatomia del lobulo para un ajuste perfecto.",
     "imagenes": [
-      "https://placehold.co/800x1000/1A1A18/FDFDFB?text=Media+Luna&font=playfair-display",
-      "https://placehold.co/800x1000/B8B8B4/1A1A18?text=Pave&font=playfair-display",
-      "https://placehold.co/800x1000/F2F2F0/1A1A18?text=Perfil&font=playfair-display"
+      "https://images.pexels.com/photos/6098251/pexels-photo-6098251.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop",
+      "https://images.pexels.com/photos/20858959/pexels-photo-20858959.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop"
     ],
     "destacado": false,
     "nuevo": true
@@ -192,9 +179,8 @@
     "materiales": ["Oro amarillo 18k", "Cierre magnetico oculto"],
     "descripcion": "Malla milanesa tejida con hilos de oro de 0.3mm. La flexibilidad del tejido imita la caida de la seda sobre la muneca.",
     "imagenes": [
-      "https://placehold.co/800x1000/1A1A18/FDFDFB?text=Seda+Dorada&font=playfair-display",
-      "https://placehold.co/800x1000/8B6F5E/FDFDFB?text=Tejido&font=playfair-display",
-      "https://placehold.co/800x1000/F2F2F0/1A1A18?text=Magnetico&font=playfair-display"
+      "https://images.pexels.com/photos/12495610/pexels-photo-12495610.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop",
+      "https://images.pexels.com/photos/6262842/pexels-photo-6262842.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop"
     ],
     "destacado": false,
     "nuevo": false,
